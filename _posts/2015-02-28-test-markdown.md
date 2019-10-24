@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Test markdown
-subtitle: Each post also has a subtitle
+title: Healthcare Spending in the USA; A clear picture of costs unchecked
+subtitle: Over the last decade Healthcare costs continue to rise
 gh-repo: daattali/beautiful-jekyll
 gh-badge: [star, fork, follow]
 tags: [test]
