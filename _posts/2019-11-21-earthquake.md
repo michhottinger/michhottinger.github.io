@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Earthquakes gives us the Shakes
-subtitle: Earthquakes in California Region: Should you be worried?
+subtitle: "Earthquakes in California Region: Should you be worried?"
 #gh-repo: daattali/beautiful-jekyll
 #gh-badge: [star, fork, follow]
 tags: [earthquake prediction, earthquakes]
