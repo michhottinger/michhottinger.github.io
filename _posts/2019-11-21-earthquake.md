@@ -12,5 +12,5 @@ This article is written to expose how predictive data can be used to someday pre
 
 **[Read the full article here](https://medium.com/@michellibelly/earthquakes-gives-us-the-shakes-b407877550ba).**
 
-**[Source Code Here](Unit2DataEarthquakes.ipynb)**
+**[Source Code Here](ds-unit-2-data/Unit2DataEarthquakes.ipynb)**
 
