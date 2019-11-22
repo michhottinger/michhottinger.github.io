@@ -10,7 +10,7 @@ comments: true
 
 This article is written to expose how predictive data can be used to someday predict earthquakes. 
 
-**[Read the full article here](https://medium.com/p/b407877550ba/edit).**
+**[Read the full article here](https://medium.com/@michellibelly/earthquakes-gives-us-the-shakes-b407877550ba).**
 
-**[Source Code Here](update this)**
+**[Source Code Here](Unit2DataEarthquakes.ipynb)**
 
