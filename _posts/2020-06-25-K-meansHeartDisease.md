@@ -44,22 +44,26 @@ Labels from k-means clusters applied to the entire dataset and graphing the age 
 The heart dataset I used is full of numeric categorical data, which does not cluster well as a whole. To solve this issue and tailor the machine learning to the data, I should transition to a K-modes function for machine learning rather than the K-means. K-modes replaces the means of clusters with modes and works in a similar fashion to K-means.
 
 ![image](https://github.com/michhottinger/michhottinger.github.io/blob/master/img/Screen%20Shot%202020-06-25%20at%2012.57.58.png)
+
 No nice clusters on the entire dataset. Too many dimensions and no clear groups for K-means.
 
 To overcome some obstacles with the data type, I chose to use only the continuous numerical data, create two cluster groups and apply those cluster labels to the data. 
 
 ![image](https://github.com/michhottinger/michhottinger.github.io/blob/master/img/Screen%20Shot%202020-06-25%20at%2014.31.19.png)
+
 Scaled multidimensional data clusters on heart disease.
 
 Since this dataset happens to contain a target feature, I have the opportunity to check the accuracy of my k-means clusters. In this heart data, the target indicates if the patient had heart disease [1] or does not have heart disease [0]. The accuracy of my self-made k-means was 74.59% while the accuracy of Sci-kit Learn's k-means was 74.26%. The difference is likely due to the initialization position of the centroids in the data.
 
 ![image](https://github.com/michhottinger/michhottinger.github.io/blob/master/img/Screen%20Shot%202020-06-25%20at%2014.08.36.png)
 ![image](https://github.com/michhottinger/michhottinger.github.io/blob/master/img/Screen%20Shot%202020-06-25%20at%2014.10.02.png)
+
 Dataset on the left shows the k-means clusters while the dataset on the right shows the actual target values for no disease (0) Green or disease (1) red. Magenta and red are comparable clusters that signify >50% diameter narrowing and is an angiographic disease status of heart disease.
 
 When attempting to predict if a person will have heart disease, we can see based on our above graphs that the age and cholesterol are not generally a good predictor. See the green and blue data points without disease? Greater age does not increase risk. Cholesterol levels are not indicative either, otherwise we would see a pattern of upward red. Most of the red is right in the middle scattered upward and downward. Two better indicators for disease can be observed below.
 
 ![image](https://github.com/michhottinger/michhottinger.github.io/blob/master/img/Screen%20Shot%202020-06-25%20at%2014.47.04.png)
+
 Thalach: Maximum heart rate achieved and Oldpeak: Stress Test: depression induced by exercise relative to rest
 
 With the above data provided, we can draw a clear slanted line and see that a patient will either have heart disease or not, regardless of age, weight, gender, cholesterol and the several other features we have available. In this case, magenta is disease [0] while blue is disease free. Oldpeak (a stress test measurement) would not indicate much on its own, but when graphed next to Thalach (max heart rate) we can create a nice divide using the labels from our clusters (blue and magenta). If a patient falls on the magenta side of the line, they are very likely to have heart disease. If they fall on the blue side, they are likely to be disease free, for now.
