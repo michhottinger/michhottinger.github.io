@@ -1,3 +1,21 @@
+---
+layout: post
+title: K-means Clustering for Analysis of Heart Disease
+subtitle: "How K-Means can help uncover information in unsupervised learning"
+#gh-repo: daattali/beautiful-jekyll
+#gh-badge: [star, fork, follow]
+tags: [kmeans, unsupervised machine learning, heart disease]
+comments: true
+---
+
+This article was written to help understand the power of K-means in predicting health outcomes in unsupervised machine learning. 
+
+**[Read the full article here](https://medium.com/@michellibelly/k-means-clustering-for-analysis-of-heart-disease-c2c6f75927e0).**
+
+**[Source Code Here](https://github.com/michhottinger/CS-Data-Science-Build-Week-1)**
+
+
+
 K-Means Clustering for Analysis of Heart Disease
 How K-Means can help uncover information in unsupervised learning
 photo cred: https://health.clevelandclinic.org/is-heart-disease-curable/Have you ever wondered what is meant to be done with the abundance of data that is floating around. Many datasets lack a column that answers a specific question such as , "does this person have cancer" or "is this person a yes or a no". The outcomes label (also known as target or Y-label) can answer a question that summarizes of all the data. The classic Titanic dataset for example, has several informative columns about ticket price, age, gender, family onboard, but the column that sums this all together in a "so what" is the "survived" column that states if the person lived or died on the Titanic. We can use the "survived" column as a target and determine which other columns of data may have resulted in a survival versus a death. This is supervised learning. We have an abundance of health data, but we don't know if the person has a disease, or lives or dies yet. Without this target data, this is a project for unsupervised machine learning. A great place to start an unsupervised project is with K-means clustering. Using K-means, we are looking at ways in which the data is grouped. We can start with an arbitrary number of K clusters (let's start with three) and calculate the lowest sum of squares error each data point has from the nearest cluster center (known as a centroid). We want the three centroids to be as far apart from one another while also being as close to their respective data points as possible.
