@@ -70,6 +70,7 @@ With the above data provided, we can draw a clear slanted line and see that a pa
 K-means clusters are a nice way to visualize data when we are not sure what we are looking for. Finding clusters then labeling the data with the cluster labels to create your own "target" feature is a great way to handle unlabeled data for unsupervised machine learning. As you can see, once application can be finding hidden features that may indicate a disease state in patients. Finding the features that most accurately indicate a given disease can save both money and lives.
 
 Below I will post my code for implementing the above study.
+```
 import numpy as np
 from numpy.linalg import norm
 
@@ -128,9 +129,10 @@ class Kmeans:
         old_centroids = self.centroids#to define old within function
         distance = self.compute_distance(X, old_centroids)
         return self.find_closest_cluster(distance)
+```
 
-
-Next we will read in dataset, clean data and visualize the data
+Next we will read in dataset, clean data and visualize the data.
+```
 # Import the data
 df = pd.read_csv('https://raw.githubusercontent.com/michhottinger/CS-Data-Science-Build-Week-1/master/datasets_33180_43520_heart.csv')
 df.head(5)
@@ -163,7 +165,9 @@ plt.ylabel('')
 plt.title('Visualization of raw data');
 #use a subset of the data to start k-means exploration
 data = df_copy[['age', 'chol']]
-Now use your K-means to get labels and view data
+```
+Now use your K-means to get labels and view data.
+```
 # Standardize the data
 X_std = StandardScaler().fit_transform(data)
 
@@ -172,7 +176,7 @@ X_std = StandardScaler().fit_transform(data)
 km = Kmeans(n_clusters=3, max_iter=100, random_state = 42)
 km.fit(X_std)
 centroids = km.centroids
-# labels is exquivalent to calling fit(x) then predict
+# labels_ in Scikit Learn are equivalent to calling fit(x) then predict
 labels_ = km.predict(X_std)
 labels_
 # Plot the clustered data
@@ -192,7 +196,9 @@ plt.xlabel('age')
 plt.ylabel('chol')
 plt.title('Visualization of clustered data', fontweight='bold')
 ax.set_aspect('equal');
-Check out the labels and put them on the dataset
+```
+Check out the labels and put them on the dataset.
+```
 #labels added to dataset
 data['cluster'] = labels_
 data.head(5)
@@ -203,7 +209,9 @@ grouped = data.groupby('cluster')
 for key, group in grouped:
     group.plot(ax=ax, kind='scatter', x='age', y='chol', label=key, color=colors[key])
 plt.show()
+```
 To determine the best number of clusters, you can also use the elbow method.
+```
 #elbow method:
 # Run the Kmeans algorithm and get the index of data points clusters
 sse = []
@@ -219,4 +227,5 @@ plt.figure(figsize=(6, 6))
 plt.plot(list_k, sse, '-o')
 plt.xlabel(r'Number of clusters *k*')
 plt.ylabel('Inertia');
+```
 Now you have seen all the code to run your own K-means testing. Enjoy!
