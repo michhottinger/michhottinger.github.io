@@ -10,7 +10,7 @@ comments: true
 
 This article was written to help understand the power of K-means in predicting health outcomes in unsupervised machine learning. 
 
-**[Read the full article here](https://medium.com/@michellibelly/k-means-clustering-for-analysis-of-heart-disease-c2c6f75927e0).**
+**[Read the full article here](https://medium.com/@michellibelly/k-means-clustering-for-analysis-of-heart-disease-c2c6f75927e0?sk=126332b1214dcc43878765b70b98d964).**
 
 **[Source Code Here](https://github.com/michhottinger/CS-Data-Science-Build-Week-1)**
 
